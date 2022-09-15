@@ -5,3 +5,5 @@ cloudbuild.yaml
 
 
 # mine
+certs
+lib/config/database.ts
