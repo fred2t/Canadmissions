@@ -1,0 +1,43 @@
+.post-page {
+    background-color: var(--middle-section-background);
+    color: black;
+    padding: 1.5rem;
+
+    > * {
+        width: clamp(330px, 67%, 9999px);
+        margin-bottom: 0 !important;
+        margin-top: 0 !important;
+        border-radius: 0 !important;
+    }
+
+    @media screen and (max-width: 1000px) {
+        > * {
+            width: clamp(330px, 90%, 9999px);
+        }
+    }
+
+    .community-post {
+    }
+
+    .community-participation-editor-container {
+        padding-bottom: 1rem;
+
+        .footer {
+            align-items: flex-start;
+
+            .submit-btn {
+                min-width: 15%;
+                padding: 0.6rem 2rem;
+            }
+        }
+    }
+
+    .comments-container {
+        background-color: whitesmoke;
+        padding: 1rem;
+
+        .comments-container-header {
+            margin-bottom: 1rem;
+        }
+    }
+}

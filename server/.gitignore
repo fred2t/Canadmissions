@@ -1,0 +1,10 @@
+node_modules
+.git
+.env
+cloudbuild.yaml
+
+
+# mine
+lib/zControl/maybe.ts
+lib/zControl/serverDebugging.ts
+lib/zControl/sqlWriter.sql

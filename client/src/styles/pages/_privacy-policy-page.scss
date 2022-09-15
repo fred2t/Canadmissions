@@ -1,0 +1,31 @@
+.privacy-policy-page {
+    background-color: var(--middle-section-background);
+    color: black;
+    min-height: 100vh;
+    padding: 5rem 15rem;
+
+    .header {
+        .title {
+            font-size: 3rem;
+        }
+    }
+
+    .points-list-container {
+        margin-top: 3rem;
+
+        .heading {
+            margin-top: 2rem;
+        }
+    }
+
+    .main-topic {
+        margin-top: 2rem;
+
+        .title {
+            font-size: 2rem;
+        }
+
+        .information {
+        }
+    }
+}

@@ -1,0 +1,98 @@
+$top-bar-height: 4rem;
+$input-height: 1.5rem;
+$school-input-width: 25vw;
+
+.create-post-page {
+    padding: 2rem 12rem;
+    min-height: 100vh;
+    background-color: var(--middle-section-background);
+    color: black;
+
+    > * {
+        border-radius: 0.4rem;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+
+        margin-bottom: 1rem;
+        height: $top-bar-height;
+        padding: 1rem;
+
+        .title {
+            margin-right: 1rem;
+            font-weight: lighter;
+        }
+
+        .input-container {
+            // used as reference for the input popup when user chooses school being posted to
+            position: relative;
+
+            .input {
+                background-color: var(--input-background);
+                width: $school-input-width;
+
+                .MuiOutlinedInput-input {
+                    padding: 1rem;
+                    height: $input-height;
+                }
+            }
+        }
+    }
+
+    .school-community-summary-card {
+        .hide-card-btn {
+        }
+
+        .school-logo {
+        }
+
+        .school-community-information {
+        }
+    }
+
+    .create-post-container {
+        .input {
+            border-radius: 0.5rem;
+
+            * {
+                // border: none;
+                // outline: none;
+            }
+        }
+
+        .title-input {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+
+            .MuiFormLabel-root,
+            .MuiInputBase-root {
+                font-size: 1.5rem;
+                background-color: whitesmoke;
+            }
+
+            .MuiFormHelperText-root {
+                font-size: 1.2rem;
+            }
+        }
+
+        .text-editor {
+            border-radius: 0.5rem;
+        }
+    }
+}
+
+.header-popup.searching-site-popup.pick-community-popup {
+    top: $top-bar-height;
+    left: 0;
+
+    z-index: 9999;
+    width: $school-input-width;
+
+    .header {
+    }
+
+    .logo {
+    }
+}

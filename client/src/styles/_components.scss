@@ -1,0 +1,482 @@
+.link-with-icon {
+    display: flex;
+    align-items: center;
+}
+
+.tooltip-btn {
+    color: black;
+    box-shadow: var(--clean-box-shadow);
+    min-width: 0;
+    padding: 0.5rem;
+
+    .icon {
+        font-size: 2.7rem;
+    }
+}
+
+.community-participation-editor-container {
+    background-color: whitesmoke;
+
+    .editor {
+        min-height: 200px;
+        border-radius: 0.5rem;
+
+        * {
+            border: none;
+            outline: none;
+        }
+
+        .ql-container {
+            font-size: 1.4rem;
+
+            .ql-editor {
+                min-height: 20vh;
+            }
+        }
+    }
+
+    .editor-error-message {
+        color: red;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 0.5rem 1rem;
+
+        .submit-btn {
+            padding: 0.5rem 1rem;
+            min-width: 100px;
+            color: white;
+        }
+    }
+}
+
+$community-post-width: clamp(330px, 65vw, 9999px);
+$community-bar-font-size: 1.5rem;
+$community-bar-background: papayawhip;
+.school-community-summary-card {
+    // will be used as reference for the button to hide the school community summary card
+    position: relative;
+
+    display: flex;
+
+    background-color: $community-bar-background;
+    color: black;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+
+    .hidden-card-bar {
+        // used as reference for the button to show the school community summary card
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+
+        background-color: peachpuff;
+        padding: 0.3rem;
+        width: 100%;
+
+        .open-card-btn {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+        }
+    }
+
+    .hide-card-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        min-width: 0;
+        padding: 0.3rem;
+        height: 2.5rem;
+        margin-top: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    .school-logo {
+        align-self: center;
+        height: 15vw;
+        width: 15vw;
+        margin-right: 2rem;
+    }
+
+    .school-community-information {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .main-info {
+            .top-bar {
+                display: flex;
+                align-items: center;
+
+                .full-name {
+                    font-size: 3rem;
+                    margin-right: 1rem;
+                }
+
+                .join-btn {
+                    padding: 0.3rem 3.5rem;
+                    border-radius: 1.5rem;
+                    font-weight: bold;
+                    font-size: 1.3rem;
+                }
+            }
+
+            .summary {
+            }
+
+            .learn-more-link {
+                font-size: 0.7rem;
+                margin-top: 0.2rem;
+            }
+        }
+
+        .random-details {
+            margin-top: 1rem;
+        }
+    }
+}
+
+.community-header {
+    width: 100%;
+
+    .bar {
+        background-color: $community-bar-background;
+        margin-bottom: 0.5rem;
+        font-size: $community-bar-font-size;
+
+        // line up posts with header bars
+        padding: 1rem calc((100% - $community-post-width) / 2);
+    }
+
+    .not-logged-in-bar {
+        display: flex;
+        align-items: center;
+
+        .btn {
+            font-size: 1.2rem;
+        }
+    }
+
+    .make-post-bar {
+        .btn {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .full-width-btn {
+            width: $community-post-width;
+        }
+    }
+
+    .filter-posts-bar {
+        display: flex;
+        justify-content: space-between;
+
+        .tag-filter-container {
+            padding: 0.4rem 1rem;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .main-filters {
+            .selected {
+                background-color: peachpuff;
+                cursor: default;
+            }
+
+            .unselected {
+            }
+
+            .btn {
+                font-size: 1.2rem;
+                padding: 0.4rem 1rem;
+
+                .icon {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
+
+.community-interaction-vessel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.community-posts-list {
+    width: $community-post-width;
+}
+
+@media screen and (max-width: 1000px) {
+    .community-posts-list {
+        width: clamp(330px, 80vw, 9999px);
+    }
+}
+
+$community-post-padding: 1rem;
+$community-post-point-btn-width: 2.5rem;
+$community-post-points-margin-right: 0.5rem;
+.community-post {
+    position: relative;
+
+    padding: $community-post-padding;
+    background-color: rgba(245, 245, 245, 0.612);
+    margin-bottom: 1rem;
+    border: 0.1rem solid white;
+    border-radius: 0.3rem;
+    max-height: 75vh;
+    overflow-y: hidden;
+
+    &.unlimited-height {
+        max-height: fit-content;
+    }
+
+    .wrap-down {
+        word-wrap: break-word;
+    }
+
+    .link {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .nav-link {
+        font-weight: bold;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .top-bar {
+        display: flex;
+
+        border-bottom: 0.1rem solid lightgray;
+        margin-bottom: 0.5rem;
+
+        .post-points-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            margin-right: $community-post-points-margin-right;
+
+            // remove default spacing of mui components
+            * {
+                min-width: 0;
+                padding: 0;
+                margin: 0;
+            }
+
+            .point-btn {
+                color: black;
+
+                .icon {
+                    width: $community-post-point-btn-width;
+                    height: $community-post-point-btn-width;
+
+                    &.good-score {
+                        color: rgb(0, 205, 0);
+                    }
+
+                    &.bad-score {
+                        color: rgb(255, 64, 64);
+                    }
+                }
+            }
+        }
+
+        .points {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .post-information-container {
+            width: 100%;
+
+            .community-control-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                font-size: 1.3rem;
+
+                .community-options {
+                    display: flex;
+                    justify-content: flex-end;
+
+                    .option-btn {
+                        margin-left: 0.1rem;
+                        color: black;
+                        box-shadow: var(--clean-box-shadow);
+                    }
+                }
+            }
+
+            .title {
+                display: block;
+
+                font-size: 2.3rem;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .body-container {
+        padding: 1rem 0.5rem;
+
+        .body {
+            font-size: 1.4rem;
+
+            // override quilljs editor styles
+            & * {
+                color: black !important;
+            }
+
+            &.fade-end {
+                &::after {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+
+                    content: "";
+                    pointer-events: none;
+                    background-image: linear-gradient(
+                        to bottom,
+                        rgba(255, 255, 255, 0),
+                        whitesmoke 100%
+                    );
+                    width: 100%;
+                    height: 25%;
+                }
+            }
+        }
+    }
+}
+
+.community-post-comment-list {
+    margin-left: 1rem;
+}
+
+.community-post-comment {
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgb(241, 241, 241);
+    margin-bottom: 0.5rem;
+    padding: 0.4rem;
+    overflow-x: scroll;
+    overflow-y: scroll;
+
+    .comment-main-portion {
+        display: flex;
+        // background-color: red;
+
+        .points-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            margin-right: 0;
+
+            .points-counter {
+                font-weight: bold;
+                font-size: 1.5rem;
+            }
+
+            .icon {
+                font-size: 2rem;
+            }
+        }
+
+        .comment-content-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            .header {
+                font-size: 1.2rem;
+
+                .comment-info {
+                    color: gray;
+
+                    .hyperlink {
+                        text-decoration: none;
+                        color: inherit;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+
+                    .author-username {
+                        color: black;
+                    }
+                }
+            }
+
+            .comment-body {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .action-btns-container {
+        // make mui btns use black all over
+        * {
+            color: black;
+        }
+
+        .btn {
+            margin-right: 0.2rem;
+            padding: 0.4rem 1rem;
+            min-width: 0;
+            box-shadow: var(--clean-box-shadow-light);
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .nested-comments-container {
+        display: flex;
+
+        margin-left: 0.2rem;
+
+        .collapse-comments-line {
+            position: relative;
+
+            border: none;
+            width: 2.5rem;
+            cursor: pointer;
+
+            &.collapse-comments-line:hover::before {
+                background-color: black;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 0.1rem;
+                background-color: lightgray;
+            }
+        }
+    }
+}

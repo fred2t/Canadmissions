@@ -1,0 +1,71 @@
+.section-separator {
+    // all separators will have these styles
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    // border: 1rem solid white;
+}
+
+// font colours
+.cgreen {
+    color: green;
+}
+
+.cgold {
+    color: gold;
+}
+
+.cdgrod {
+    color: darkgoldenrod;
+}
+
+.corange {
+    color: orange;
+}
+
+.ccoral {
+    color: coral;
+}
+
+.cdred {
+    color: darkred;
+}
+
+.cred {
+    color: red;
+}
+
+.cdblue {
+    color: darkblue;
+}
+
+// backgrounds
+.bgreen {
+    background-color: rgba($color: green, $alpha: 0.3);
+}
+
+.bred {
+    background-color: rgba($color: red, $alpha: 0.3);
+}
+
+.point {
+    cursor: pointer;
+}
+
+.icon-div {
+    display: flex;
+    align-items: center;
+
+    .icon {
+        margin-right: 0.5rem;
+        height: 2rem;
+        width: 2rem;
+    }
+}
+
+.in-dev {
+    &:hover {
+        cursor: not-allowed;
+    }
+}

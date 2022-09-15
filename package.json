@@ -1,0 +1,23 @@
+{
+    "name": "nast",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "sc": "cd client && npm run dev",
+        "ss": "cd server && npm run dev",
+        "ghadd": "git add . && git commit -m \"begging over here\" && git push",
+        "gbuild": "cd server && tsc && gcloud builds submit --tag us-central1-docker.pkg.dev/meta-aura-354617/getter/lmaoz ."
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/khyreek/fullkaij.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/khyreek/fullkaij/issues"
+    },
+    "homepage": "https://github.com/khyreek/fullkaij#readme"
+}

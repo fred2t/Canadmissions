@@ -1,0 +1,223 @@
+$app-modal-default-bg: whitesmoke;
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+    background-color: $app-modal-default-bg;
+
+    .cover {
+        background-image: url("../../public/images/sea-bg.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        width: 20%;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        font-size: 2rem;
+        color: black;
+    }
+}
+
+.sign-on-modal {
+    display: flex;
+
+    width: 80vw;
+    height: 100vh;
+    color: black;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        padding: 2rem;
+        background-color: $app-modal-default-bg;
+
+        .agreement-confirmation {
+            margin-bottom: 2rem;
+        }
+
+        .login-method-separator {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            width: 50%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            -webkit-box-align: center;
+            -webkit-box-pack: justify;
+
+            .divider-line {
+                border-top: 1px solid black;
+                width: 40%;
+            }
+
+            .divider-text {
+                text-transform: uppercase;
+            }
+        }
+
+        .uniform-width {
+            width: clamp(180px, 50%, 600px);
+        }
+
+        .link {
+            text-decoration: none;
+            color: #0066ff;
+            width: fit-content;
+
+            &:hover {
+                color: blue;
+            }
+        }
+
+        .input {
+            margin-bottom: 1rem;
+        }
+
+        .main-btn {
+            border-radius: 3rem;
+        }
+
+        .sign-up-btn {
+        }
+    }
+}
+
+.sign-on-modal.login {
+    .cover {
+        background-position: left;
+    }
+
+    .login-btn {
+        margin-bottom: 1rem;
+    }
+
+    .forgot-password-btn {
+        margin-bottom: 2rem;
+        width: fit-content;
+    }
+}
+
+.sign-on-modal.sign-up {
+    .cover {
+        background-position: right;
+    }
+
+    .container {
+        .sign-up-btn {
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.forgot-password-modal {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 80vw;
+    min-height: 100vh;
+    height: 100vh;
+    color: black;
+    background-color: white;
+
+    .cover {
+        width: 20%;
+        background-image: url("../../public/images/sea-bg.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .z {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+
+        padding: 2rem;
+        padding-right: 30%;
+
+        @media screen and (max-width: 400px) {
+            padding-right: 2rem;
+        }
+
+        .description {
+            margin-bottom: 1rem;
+        }
+
+        .input {
+            margin-bottom: 2rem;
+        }
+
+        .main-btn {
+            margin-bottom: 3rem;
+            width: fit-content;
+            border-radius: 3rem;
+            padding: 1rem 3rem;
+        }
+
+        .helper-btn-container {
+            .btn {
+                padding: 0.5rem 1rem;
+            }
+        }
+
+        .app-logo {
+            width: 10rem;
+            margin-top: 2rem;
+        }
+    }
+}
+
+.change-password-modal {
+    display: flex;
+
+    padding: 3rem;
+    height: 90vh;
+    width: 75vw;
+    color: black;
+
+    .cover {
+        width: 25%;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        width: clamp(200px, 30%, 9999px);
+        margin-left: 1rem;
+
+        > * {
+            margin-bottom: 1rem;
+        }
+
+        > header {
+            .title {
+                font-size: 2rem;
+            }
+        }
+
+        .input {
+        }
+    }
+}
