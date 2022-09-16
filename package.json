@@ -6,8 +6,7 @@
     "scripts": {
         "sc": "cd client && npm run dev",
         "ss": "cd server && npm run dev",
-        "gh": "git add . && git commit -m \"begging over here\" && git push",
-        "gbuild": "cd server && tsc && gcloud builds submit --tag us-central1-docker.pkg.dev/meta-aura-354617/getter/lmaoz ."
+        "gh": "git add . && git commit -m \"begging over here\" && git push"
     },
     "repository": {
         "type": "git",
