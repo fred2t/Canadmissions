@@ -1,6 +1,6 @@
 # Canadmissions
 ## Community forum for Canadian admission processes that centralizes resources from the saturation of US admission sources on Google searches
-### Join the 100s of active users learning and sharing resources for Canadian admissions: [[redacted]](https://www.google.com)
+### Join the 100s of active users learning and sharing resources for Canadian admissions: [Canadmissions](https://www.canadmissions.com/)
 
 <ul>
   <li>Infinite scrolling & infinite nested comments in intervals of 10 for maximum scalability</li>
