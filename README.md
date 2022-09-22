@@ -6,7 +6,7 @@
   <li>Infinite scrolling & infinite nested comments in intervals of 10 for maximum scalability</li>
   <li>Integrated with Google ReCAPTCHAv2 to block bots & SSO for easy account creation between 12500+ daily requests at peak</li>
   <li>Multiple SQL statements joining 5+ tables for 11000+ daily community post requests at a time to reduce unnecessary database connections and response bandwidth.</li>
-  <li>Secured by JWT, secret key, and network connections</li>
+  <li>Secured by JWT, secret key, and httpOnly cookies</li>
 </ul>
 
 #### Post Anytime
