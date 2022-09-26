@@ -1,5 +1,5 @@
 # Canadmissions
-## Community forum for Canadian admission processes that centralizes resources from the saturation of US admission sources on Google searches
+## Community forum for Canadian admissions processes that centralizes Canadian resources from the saturation of US admissions resources over Google searches.
 ### Join the 100s of active users learning and sharing resources for Canadian admissions: [Canadmissions](https://www.canadmissions.com/)
 
 <ul>
